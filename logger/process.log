@@ -1,0 +1,89 @@
+[25-Feb-2024 10:38:55] Connected to MariaDB Server <IP> Database <database>.
+[25-Feb-2024 10:39:04] Closed MariaDB Connection From Server <IP> Database <database>.
+[25-Feb-2024 10:39:07] No missing hour intervals.
+[25-Feb-2024 10:39:07] Filling Null values for numerical columns (dt, temp, dew_point, feels_like, temp_min, temp_max, pressure, humidity, wind_speed, wind_deg, clouds_all).
+[25-Feb-2024 10:39:07] Finished filling Null values with the 'Median'.
+[25-Feb-2024 10:39:07] Forecast: Extracting the necessary information from the dt_iso column.
+[25-Feb-2024 10:39:07] Forecast: Preparing the data to obtain the best model.
+[25-Feb-2024 10:39:22] Forecast: Preparing the data for forecasting 48 hours ahead.
+[25-Feb-2024 10:39:36] Forecast: Starting Process to Get Best Models for Each Target Columns (temp, dew_point, feels_like, temp_min, temp_max, pressure, humidity).
+[25-Feb-2024 10:39:36]   > Column 'temp'
+[25-Feb-2024 10:40:12]        with Model 'XGBoost'
+[25-Feb-2024 10:40:48]        with Model 'K-NearestNeighbor'
+[25-Feb-2024 10:40:51]        with Model 'Linear'
+[25-Feb-2024 10:41:14]        with Model 'Ridge'
+[25-Feb-2024 10:41:18]        with Model 'Lasso'
+[25-Feb-2024 10:41:21]        with Model 'DecisionTree'
+[25-Feb-2024 10:50:33]        with Model 'AdaBoost'
+[25-Feb-2024 11:09:59]   > Column 'dew_point'
+[25-Feb-2024 11:10:54]        with Model 'XGBoost'
+[25-Feb-2024 11:11:47]        with Model 'K-NearestNeighbor'
+[25-Feb-2024 11:11:50]        with Model 'Linear'
+[25-Feb-2024 11:12:15]        with Model 'Ridge'
+[25-Feb-2024 11:12:19]        with Model 'Lasso'
+[25-Feb-2024 11:12:22]        with Model 'DecisionTree'
+[25-Feb-2024 11:21:46]        with Model 'AdaBoost'
+[25-Feb-2024 11:49:11]   > Column 'feels_like'
+[25-Feb-2024 11:49:54]        with Model 'XGBoost'
+[25-Feb-2024 11:50:41]        with Model 'K-NearestNeighbor'
+[25-Feb-2024 11:50:43]        with Model 'Linear'
+[25-Feb-2024 11:51:10]        with Model 'Ridge'
+[25-Feb-2024 11:51:14]        with Model 'Lasso'
+[25-Feb-2024 11:51:17]        with Model 'DecisionTree'
+[25-Feb-2024 12:02:15]        with Model 'AdaBoost'
+[25-Feb-2024 12:22:08]   > Column 'temp_min'
+[25-Feb-2024 12:22:52]        with Model 'XGBoost'
+[25-Feb-2024 12:23:33]        with Model 'K-NearestNeighbor'
+[25-Feb-2024 12:23:36]        with Model 'Linear'
+[25-Feb-2024 12:24:00]        with Model 'Ridge'
+[25-Feb-2024 12:24:05]        with Model 'Lasso'
+[25-Feb-2024 12:24:07]        with Model 'DecisionTree'
+[25-Feb-2024 12:35:16]        with Model 'AdaBoost'
+[25-Feb-2024 12:53:59]   > Column 'temp_max'
+[25-Feb-2024 12:54:28]        with Model 'XGBoost'
+[25-Feb-2024 12:55:04]        with Model 'K-NearestNeighbor'
+[25-Feb-2024 12:55:06]        with Model 'Linear'
+[25-Feb-2024 12:55:24]        with Model 'Ridge'
+[25-Feb-2024 12:55:27]        with Model 'Lasso'
+[25-Feb-2024 12:55:29]        with Model 'DecisionTree'
+[25-Feb-2024 12:59:30]        with Model 'AdaBoost'
+[25-Feb-2024 13:10:49]   > Column 'pressure'
+[25-Feb-2024 13:11:16]        with Model 'XGBoost'
+[25-Feb-2024 13:11:51]        with Model 'K-NearestNeighbor'
+[25-Feb-2024 13:11:52]        with Model 'Linear'
+[25-Feb-2024 13:12:10]        with Model 'Ridge'
+[25-Feb-2024 13:12:13]        with Model 'Lasso'
+[25-Feb-2024 13:12:14]        with Model 'DecisionTree'
+[25-Feb-2024 13:15:29]        with Model 'AdaBoost'
+[25-Feb-2024 13:32:01]   > Column 'humidity'
+[25-Feb-2024 13:32:25]        with Model 'XGBoost'
+[25-Feb-2024 13:33:02]        with Model 'K-NearestNeighbor'
+[25-Feb-2024 13:33:04]        with Model 'Linear'
+[25-Feb-2024 13:33:23]        with Model 'Ridge'
+[25-Feb-2024 13:33:27]        with Model 'Lasso'
+[25-Feb-2024 13:33:32]        with Model 'DecisionTree'
+[25-Feb-2024 13:36:57]        with Model 'AdaBoost'
+[25-Feb-2024 13:51:32] Forecast: Starting Forecast with Best Model for Each Target Columns (temp, dew_point, feels_like, temp_min, temp_max, pressure, humidity).
+[25-Feb-2024 13:51:32]   > Column 'temp' -> 'DecisionTree'
+[25-Feb-2024 13:56:01]   > Column 'dew_point' -> 'AdaBoost'
+[25-Feb-2024 14:09:31]   > Column 'feels_like' -> 'AdaBoost'
+[25-Feb-2024 14:18:30]   > Column 'temp_min' -> 'AdaBoost'
+[25-Feb-2024 14:27:32]   > Column 'temp_max' -> 'Ridge'
+[25-Feb-2024 14:27:53]   > Column 'pressure' -> 'AdaBoost'
+[25-Feb-2024 14:43:14]   > Column 'humidity' -> 'Linear'
+[25-Feb-2024 14:43:50] Classification: Extracting the necessary information from the dt_iso column.
+[25-Feb-2024 14:43:50] Classification: Staring to Handle Outliers From Freature Columns dt, temp, dew_point, feels_like, temp_min, temp_max, pressure, humidity, month, week, day, hour
+[25-Feb-2024 14:43:50] Classification: Reduced by 4.37% from previously 102696 to 98211 data.
+[25-Feb-2024 14:43:50] Classification: Handling imbalance for class 'Clear' with count 2445.
+[25-Feb-2024 14:43:51] Classification: Starting Process to Get Best Model.
+[25-Feb-2024 14:43:51]        with Model 'DecisionTree'
+[25-Feb-2024 14:43:52]        with Model 'K-NearestNeighbors'
+[25-Feb-2024 14:43:55]        with Model 'AdaBoost'
+[25-Feb-2024 14:44:01]        with Model 'GradientBoost'
+[25-Feb-2024 14:44:59]        with Model 'XGBoost'
+[25-Feb-2024 14:45:00]        with Model 'LightGBM'
+[25-Feb-2024 14:45:02]        with Model 'NaiveBayes'
+[25-Feb-2024 14:45:02] Classification: Finished Process to Get Best Model.
+[25-Feb-2024 14:45:02] Classification: Start Process Classify with Best Model.
+[25-Feb-2024 14:45:02]        with Model 'DecisionTree'
+[25-Feb-2024 14:45:03] Classification: Finished Process Classify with Best Model.
